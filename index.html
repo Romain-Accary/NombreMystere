@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu du Numéro Mystérieux - Seigneur des Anneaux</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.cdnfonts.com/css/star-jedi" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Le Jeu du Numéro Mystérieux</h1>
+        <p><em>"Que la force soit avec toi !!"</em></p>
+
+        <!-- Sélecteur de difficulté -->
+        <label for="difficulty">Choisis ton rang :</label>
+        <select id="difficulty">
+            <option value="1">Padawan (3 essaies 1 à 10)</option>
+            <option value="2">Chevalier (2 essaies 1 à 50)</option>
+            <option value="3">Maître (1 essaie 1 à 100)</option>
+        </select>
+        <button id="valider">Confirme ton choix</button>
+
+        <!-- Champ de saisie du nombre et bouton -->
+        <p>Saisis un chiffre ou un nombre pour révéler le mystère...</p>
+        <input type="number" id="userGuess" min="1" max="100" style="display: none;" />
+        <button id="submitGuess" style="display: none;">Utiliser la force</button>
+
+        <!-- Résultats, indices et tentatives restants -->
+        <div id="temps">Temps restant</div>
+        <div id="indices"></div>
+        <div id="tentatives">Tentatives restantes : --</div>
+        <div id="resultat" style="white-space: pre-line;"></div>
+
+        <!-- Bouton pour rejouer, initialement caché -->
+        <button id="rejouer" style="display: none;">Relèveras-tu un nouveau défis Jedi ?</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
